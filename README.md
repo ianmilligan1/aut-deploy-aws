@@ -1,6 +1,8 @@
 # aut-deploy-aws
 
-This repository deploys an AWS instance, installs dependencies and AUT, transfers data, analyses it, and e-mails a relatively small amount of output to the user.
+This repository deploys an AWS instance, installs dependencies and AUT, transfers data, analyses it, and e-mails a relatively small amount of output to the user. You get a nice message like below.
+
+![Screenshot of output](https://user-images.githubusercontent.com/3834704/33961337-b2730900-e01b-11e7-805c-fcf7bf878645.png)
 
 **Note: This is a janky hack and proof of concept for me.**
 
@@ -60,7 +62,7 @@ By customizing these commands, found in `aws-deploy.sh`, you will be able to run
 
 ## The Script
 
-The above command sends a script, `startup.sh` to be run by the root user on the remote AWS instance. In general, it runs in the background, processes data, e-mails you the result file, and then kills itself.
+The above command sends a script, `startup.sh` to be run by the root user on the remote AWS instance. In general, it runs in the background, processes data, e-mails you the result file, and then kills itself. You shouldn't have to change too much, just the source of the data; the e-mail address you're sending results to.
 
 ```bash
 #!/bin/bash
