@@ -2,7 +2,7 @@
 
 ## Startup
 
-**All of this is scripted in the startup command.**
+**All of this is scripted in the startup command, `load-data.sh`.** This automates it all.
 
 Launch a nano. 
 
@@ -29,6 +29,8 @@ ssh -i key ubtunu@IP
 ```
 
 ## Connect the Drive
+
+These commands are all found in the `loader.sh` command.
 
 Format the drive
 
