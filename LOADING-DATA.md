@@ -4,7 +4,7 @@
 
 **All of this is scripted in the startup command.**
 
-Launch a nano:
+Launch a nano. 
 
 ```
 aws ec2 run-instances --image-id ami-6e1a0117 --security-group-ids sg-6b803e17 --count 1 --instance-type t2.nano --key-name devenv-key --subnet-id subnet-fb432d93 --user-data file://debug.sh --query 'Instances[0].InstanceId' | tr -d '"'
@@ -21,6 +21,7 @@ Get the IP:
 ```
 aws ec2 describe-instances --instance-ids i-00f999e7bcd16e3d7 --query 'Reservations[0].Instances[0].PublicIpAddress' | tr -d '"'
 ```
+
 Connect to the nano.
 
 ```
@@ -57,3 +58,11 @@ mdkir /data/labour
 ```
 
 And then transfer data into `/data/labour`.
+
+## Detach Volume
+
+We are then ready to detach and then do next step.
+
+```
+aws ec2 detach-volume --volume-id vol-0ed6ca7a9950468dc
+```
