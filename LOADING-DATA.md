@@ -4,10 +4,10 @@
 
 **All of this is scripted in the startup command, `load-data.sh`.** This automates it all.
 
-Launch a nano. 
+Launch a c5.large (seems to be the best balance btw price and network performance - low to moderate connections CRAWL, the data is too big).
 
 ```
-aws ec2 run-instances --image-id ami-6e1a0117 --security-group-ids sg-6b803e17 --count 1 --instance-type t2.nano --key-name devenv-key --subnet-id subnet-fb432d93 --user-data file://debug.sh --query 'Instances[0].InstanceId' | tr -d '"'
+aws ec2 run-instances --image-id ami-6e1a0117 --security-group-ids sg-6b803e17 --count 1 --instance-type c5.large --key-name devenv-key --subnet-id subnet-fb432d93 --user-data file://debug.sh --query 'Instances[0].InstanceId' | tr -d '"'
 ```
 
 Attach an instance:
