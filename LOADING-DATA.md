@@ -35,14 +35,14 @@ These commands are all found in the `loader.sh` command.
 Format the drive
 
 ```
-sudo mkfs -t ext4 /dev/xvdf
+sudo mkfs -t ext4 /dev/nvme1n1
 ```
 
 Mount the drive:
 
 ```
 sudo mkdir /data
-sudo mount /dev/xvdf /data
+sudo mount /dev/nvme1n1 /data
 ```
 
 Change ownership to ubuntu user:
