@@ -66,5 +66,10 @@ And then transfer data into `/data/labour`.
 We are then ready to detach and then do next step.
 
 ```
+sudo umount /dev/nvme1n1
+sudo halt
+```
+
+```
 aws ec2 detach-volume --volume-id vol-0ed6ca7a9950468dc
 ```
